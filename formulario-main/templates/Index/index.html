@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Declaração de Bens</title>
+
+  <link rel="stylesheet" href="../static/style.css">
+
+</head>
+
+<body>
+  <main>
+    <img src="https://assets.infra.grancursosonline.com.br/projeto/prefeitura-municipal-de-itapecerica-da-serra-sp.png" class="imgLogo">
+    <div>
+      <h1>Declaração de Bens</h1>
+    </div>
+
+    <!-- Adicionando os botões lado a lado -->
+    <div class="DivisaoBens">
+      <button class="PossuiBens" onClick="possuoBens()">Possuo Bens</button>
+      <button class="NaoPossuiBens" onClick="naoPossuoBens()">Não Possuo Bens</button>
+    </div>
+
+    <!-- Ícone -->
+
+    <!-- Script para manipular os cliques nos botões -->
+    <script>
+      function possuoBens() {
+        window.location.href = "{{ url_for('create') }}";
+      }
+
+      function naoPossuoBens() {
+        window.location.href = "{{ url_for('nao_possui_bens') }}";
+      }
+    </script>
+  </main>
+
+</body>
+
+</html>
